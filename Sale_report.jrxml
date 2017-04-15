@@ -1,0 +1,606 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Sale_report" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="02fd68af-2e56-4920-bc3f-b2a14b4e4322">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="21"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Table Dataset 1" uuid="ce54f433-7a55-4815-88a5-edfb789d5c50"/>
+	<subDataset name="dataset1" uuid="aaf45ec6-1839-4c5c-857f-79046b8e48ed"/>
+	<queryString>
+		<![CDATA[SELECT
+     salevoucher.`Invoiceno` AS salevoucher_Invoiceno,
+     salevoucher.`Date` AS salevoucher_Date,
+     salevoucher.`Customer` AS salevoucher_Customer,
+     salevoucher.`Contact` AS salevoucher_Contact,
+     salevoucher.`Contact2` AS salevoucher_Contact2,
+     salevoucher.`Address` AS salevoucher_Address,
+     salevoucher.`City` AS salevoucher_City,
+     salevoucher.`Pincode` AS salevoucher_Pincode,
+     salevoucher.`GrandTotal` AS salevoucher_GrandTotal,
+     saleitems.`Item` AS saleitems_Item,
+     saleitems.`Company` AS saleitems_Company,
+     saleitems.`Modelno` AS saleitems_Modelno,
+     saleitems.`imei` AS saleitems_imei,
+     saleitems.`Salerate` AS saleitems_Salerate,
+     saleitems.`Quantity` AS saleitems_Quantity,
+     saleitems.`Total` AS saleitems_Total,
+     salevoucher.`amount` AS salevoucher_amount,
+     salevoucher.`Vat` AS salevoucher_Vat,
+     salevoucher.`additional` AS salevoucher_additional,
+     salevoucher.`roff` AS salevoucher_roff,
+     saleitems.`disc` AS saleitems_disc,
+     saleitems.`discamount` AS saleitems_discamount,
+     salevoucher.`vatp` AS salevoucher_vatp,
+     salevoucher.`addp` AS salevoucher_addp,
+     salevoucher.`scharge` AS salevoucher_scharge
+FROM
+     `salevoucher` salevoucher,
+     `saleitems` saleitems]]>
+	</queryString>
+	<field name="salevoucher_Invoiceno" class="java.lang.Integer"/>
+	<field name="salevoucher_Date" class="java.lang.String"/>
+	<field name="salevoucher_Customer" class="java.lang.String"/>
+	<field name="salevoucher_Contact" class="java.lang.String"/>
+	<field name="salevoucher_Contact2" class="java.lang.String"/>
+	<field name="salevoucher_Address" class="java.lang.String"/>
+	<field name="salevoucher_City" class="java.lang.String"/>
+	<field name="salevoucher_Pincode" class="java.lang.String"/>
+	<field name="salevoucher_GrandTotal" class="java.lang.String"/>
+	<field name="saleitems_Item" class="java.lang.String"/>
+	<field name="saleitems_Company" class="java.lang.String"/>
+	<field name="saleitems_Modelno" class="java.lang.String"/>
+	<field name="saleitems_imei" class="java.lang.String"/>
+	<field name="saleitems_Salerate" class="java.lang.String"/>
+	<field name="saleitems_Quantity" class="java.lang.String"/>
+	<field name="saleitems_Total" class="java.lang.String"/>
+	<field name="salevoucher_amount" class="java.lang.String"/>
+	<field name="salevoucher_Vat" class="java.lang.String"/>
+	<field name="salevoucher_additional" class="java.lang.String"/>
+	<field name="salevoucher_roff" class="java.lang.String"/>
+	<field name="saleitems_disc" class="java.lang.String"/>
+	<field name="saleitems_discamount" class="java.lang.String"/>
+	<field name="salevoucher_vatp" class="java.lang.String"/>
+	<field name="salevoucher_addp" class="java.lang.String"/>
+	<field name="salevoucher_scharge" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="231" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="3303ed03-542c-46da-9801-dfcef8a6bb91" x="-9" y="-11" width="154" height="20" forecolor="#330099"/>
+				<textElement>
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[VAT TIN : 0922111790]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d420312e-a8bf-4da3-8745-320a08c001c7" x="18" y="15" width="546" height="52" forecolor="#330099"/>
+				<textElement>
+					<font fontName="Algerian" size="36" isBold="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Mittal's reparing station]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="6a0037c1-53b3-478e-96d5-c724887cfe69" x="231" y="-15" width="100" height="20" forecolor="#330099"/>
+				<textElement>
+					<font fontName="Tahoma" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sale Invoice]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="361ee863-7f0b-4e8b-974c-5efedfaab91b" x="-12" y="82" width="591" height="1" forecolor="#330099"/>
+			</line>
+			<line>
+				<reportElement uuid="361ee863-7f0b-4e8b-974c-5efedfaab91b" x="-12" y="109" width="591" height="1" forecolor="#330099"/>
+			</line>
+			<staticText>
+				<reportElement uuid="3303ed03-542c-46da-9801-dfcef8a6bb91" x="114" y="86" width="310" height="32" forecolor="#330099"/>
+				<textElement>
+					<font fontName="MoolBoran" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[15-DD Plaza Mathura.     Mobile-9897098308]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="361ee863-7f0b-4e8b-974c-5efedfaab91b" x="396" y="109" width="1" height="119" forecolor="#330099"/>
+			</line>
+			<staticText>
+				<reportElement uuid="6a0037c1-53b3-478e-96d5-c724887cfe69" x="220" y="187" width="32" height="20" forecolor="#330099"/>
+				<textElement>
+					<font fontName="Tahoma" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Pin.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="6a0037c1-53b3-478e-96d5-c724887cfe69" x="44" y="208" width="80" height="20" forecolor="#330099"/>
+				<textElement>
+					<font fontName="Tahoma" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Contacts.:]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="361ee863-7f0b-4e8b-974c-5efedfaab91b" x="-11" y="229" width="591" height="1" forecolor="#330099"/>
+			</line>
+			<line>
+				<reportElement uuid="361ee863-7f0b-4e8b-974c-5efedfaab91b" x="397" y="169" width="182" height="1" forecolor="#330099"/>
+			</line>
+			<staticText>
+				<reportElement uuid="6a0037c1-53b3-478e-96d5-c724887cfe69" x="401" y="130" width="88" height="20" forecolor="#330099"/>
+				<textElement>
+					<font fontName="Tahoma" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Invoice No.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="6a0037c1-53b3-478e-96d5-c724887cfe69" x="401" y="191" width="42" height="20" forecolor="#330099"/>
+				<textElement>
+					<font fontName="Tahoma" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="6a0037c1-53b3-478e-96d5-c724887cfe69" x="252" y="208" width="8" height="20" forecolor="#330099"/>
+				<textElement>
+					<font fontName="Tahoma" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[,]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="083e5079-32c0-443f-90ec-209b10d421c8" x="44" y="146" width="342" height="40" forecolor="#330099"/>
+				<textElement>
+					<font fontName="Tahoma" size="15"/>
+					<paragraph lineSpacing="Proportional"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{salevoucher_Address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="f808b08d-b37d-4be3-928f-b0fc97acb60f" x="45" y="186" width="165" height="20" forecolor="#330099"/>
+				<textElement>
+					<font fontName="Tahoma" size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{salevoucher_City}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="baaa6741-b71b-45f5-80cc-59e00d2511c4" x="252" y="186" width="134" height="20" forecolor="#330099"/>
+				<textElement>
+					<font fontName="Tahoma" size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{salevoucher_Pincode}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="cfc8030e-4e36-43b5-856e-2abc869d06b5" x="262" y="208" width="124" height="20" forecolor="#330099"/>
+				<textElement>
+					<font fontName="Tahoma" size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{salevoucher_Contact2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="580be750-6544-47d0-89d7-dd9426c97492" x="44" y="124" width="342" height="20" forecolor="#330099"/>
+				<textElement>
+					<font fontName="Tahoma" size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{salevoucher_Customer}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch">
+			<line>
+				<reportElement uuid="361ee863-7f0b-4e8b-974c-5efedfaab91b" x="-12" y="-149" width="1" height="27" forecolor="#330099"/>
+			</line>
+			<line>
+				<reportElement uuid="361ee863-7f0b-4e8b-974c-5efedfaab91b" x="579" y="-149" width="1" height="27" forecolor="#330099"/>
+			</line>
+			<staticText>
+				<reportElement uuid="6a0037c1-53b3-478e-96d5-c724887cfe69" x="12" y="-107" width="28" height="20" forecolor="#330099"/>
+				<textElement>
+					<font fontName="Tahoma" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[To,]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="b852a38e-8b2f-4168-a403-c0f89a3f8504" mode="Transparent" x="126" y="-23" width="116" height="20" forecolor="#330099"/>
+				<textElement>
+					<font fontName="Tahoma" size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{salevoucher_Contact}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="e25b48dd-150a-461f-b181-f2f07e90f219" x="490" y="-101" width="77" height="20" forecolor="#330099"/>
+				<textElement>
+					<font fontName="Tahoma" size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{salevoucher_Invoiceno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="7e879800-8b43-49cd-8bf3-52705b0c75ed" x="444" y="-40" width="123" height="20" forecolor="#330099"/>
+				<textElement>
+					<font fontName="Tahoma" size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{salevoucher_Date}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<rectangle>
+				<reportElement uuid="aeef5d24-84c3-4729-9330-8481f344fbd1" x="-13" y="2" width="594" height="27" forecolor="#330099"/>
+			</rectangle>
+			<line>
+				<reportElement uuid="396ed934-3d31-416d-a31b-b0cce25b9c89" x="489" y="2" width="1" height="27" forecolor="#330099"/>
+			</line>
+			<line>
+				<reportElement uuid="da05c52b-44b7-4d35-8c09-04cc53d68c9f" x="403" y="2" width="1" height="27" forecolor="#330099"/>
+			</line>
+			<line>
+				<reportElement uuid="089f4ed1-df8a-4da1-8cc3-e716ac27dcfd" x="313" y="2" width="1" height="27" forecolor="#330099"/>
+			</line>
+			<staticText>
+				<reportElement uuid="e0ee3c23-61dc-4ede-a436-10cdb1e8ee98" x="50" y="6" width="113" height="20" forecolor="#330099"/>
+				<textElement>
+					<font fontName="Tahoma" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PARTICULARS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e0ee3c23-61dc-4ede-a436-10cdb1e8ee98" x="246" y="6" width="52" height="20" forecolor="#330099"/>
+				<textElement>
+					<font fontName="Tahoma" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[QNTY.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e0ee3c23-61dc-4ede-a436-10cdb1e8ee98" x="338" y="6" width="41" height="20" forecolor="#330099"/>
+				<textElement>
+					<font fontName="Tahoma" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RATE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e0ee3c23-61dc-4ede-a436-10cdb1e8ee98" x="502" y="6" width="68" height="20" forecolor="#330099"/>
+				<textElement>
+					<font fontName="Tahoma" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[AMOUNT]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="089f4ed1-df8a-4da1-8cc3-e716ac27dcfd" x="226" y="2" width="1" height="27" forecolor="#330099"/>
+			</line>
+			<staticText>
+				<reportElement uuid="e0ee3c23-61dc-4ede-a436-10cdb1e8ee98" x="413" y="6" width="68" height="20" forecolor="#330099"/>
+				<textElement>
+					<font fontName="Tahoma" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DISC. %]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="23" splitType="Stretch">
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="5dc05a98-56c6-49c1-9c5c-15e8407dece9" mode="Transparent" x="-11" y="1" width="81" height="20" forecolor="#330099"/>
+				<textElement>
+					<font fontName="Tahoma"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""+$F{saleitems_Item}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="e68f4391-bc87-42d6-a190-4c384745cd27" x="71" y="1" width="72" height="20" forecolor="#330099"/>
+				<textElement>
+					<font fontName="Tahoma"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""+$F{saleitems_Company}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="3fb1a06a-ad6e-4f44-8d9a-020a0e30d6af" x="143" y="1" width="82" height="20" forecolor="#330099"/>
+				<textElement>
+					<font fontName="Tahoma"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""+$F{saleitems_Modelno}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="4b8f2c39-7951-434d-8a78-8e204adaa22a" x="320" y="2" width="79" height="20" forecolor="#330099"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[""+$F{saleitems_Salerate}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement uuid="c7dc595b-34e7-488d-8ba1-b83024ec2ff2" x="313" y="-1" width="1" height="22" forecolor="#330099"/>
+			</line>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="d8348559-eccf-4a30-8ced-006b24aa7a0b" x="232" y="1" width="77" height="20" forecolor="#330099"/>
+				<textElement>
+					<font fontName="Tahoma"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""+$F{saleitems_Quantity}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement uuid="c7dc595b-34e7-488d-8ba1-b83024ec2ff2" x="403" y="-1" width="1" height="22" forecolor="#330099"/>
+			</line>
+			<line>
+				<reportElement uuid="c7dc595b-34e7-488d-8ba1-b83024ec2ff2" x="489" y="-1" width="1" height="22" forecolor="#330099"/>
+			</line>
+			<line>
+				<reportElement uuid="28f0d8c8-6409-4923-8297-5c3bd621adb7" x="-7" y="22" width="592" height="1" forecolor="#330099"/>
+			</line>
+			<line>
+				<reportElement uuid="c7dc595b-34e7-488d-8ba1-b83024ec2ff2" x="226" y="-1" width="1" height="22" forecolor="#330099"/>
+			</line>
+			<textField>
+				<reportElement uuid="b2e659f5-eb8d-4374-b23a-87c03abbb0e7" x="411" y="2" width="54" height="18" forecolor="#330099"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{saleitems_disc}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="7d3e6493-27a7-4834-88a7-ff54c28daa6d" x="471" y="3" width="14" height="20" forecolor="#330099"/>
+				<textElement/>
+				<text><![CDATA[%]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="21b1c75e-ca21-47b3-8b42-ff8949defe72" x="496" y="1" width="81" height="20" forecolor="#330099"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{saleitems_discamount}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="148" splitType="Stretch">
+			<textField>
+				<reportElement uuid="d67dc80e-34a8-4d90-93fa-7d3a4040d275" x="496" y="124" width="85" height="20" forecolor="#330099"/>
+				<textElement>
+					<font fontName="Tahoma" size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{salevoucher_GrandTotal}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement uuid="f6371808-cb78-439b-8e33-bdd2a17b31eb" x="-7" y="2" width="592" height="1" forecolor="#330099"/>
+			</line>
+			<line>
+				<reportElement uuid="f6371808-cb78-439b-8e33-bdd2a17b31eb" x="-7" y="146" width="592" height="1" forecolor="#330099"/>
+			</line>
+			<line>
+				<reportElement uuid="f6371808-cb78-439b-8e33-bdd2a17b31eb" x="317" y="26" width="264" height="1" forecolor="#330099"/>
+			</line>
+			<line>
+				<reportElement uuid="f6371808-cb78-439b-8e33-bdd2a17b31eb" x="317" y="3" width="1" height="23" forecolor="#330099"/>
+			</line>
+			<line>
+				<reportElement uuid="f6371808-cb78-439b-8e33-bdd2a17b31eb" x="493" y="3" width="1" height="23" forecolor="#330099"/>
+			</line>
+			<staticText>
+				<reportElement uuid="13598c59-c2fb-4647-9448-feec032d8ce0" x="347" y="4" width="125" height="20" forecolor="#330099"/>
+				<textElement>
+					<font fontName="Tahoma" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL AMOUNT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="13598c59-c2fb-4647-9448-feec032d8ce0" x="-1" y="27" width="90" height="20" forecolor="#330099"/>
+				<textElement>
+					<font fontName="Constantia" size="13" isBold="true" isItalic="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Declaration-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="13598c59-c2fb-4647-9448-feec032d8ce0" x="-3" y="49" width="149" height="20" forecolor="#330099"/>
+				<textElement>
+					<font fontName="Constantia" size="13" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[TERMS & CONDITIONS:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="13598c59-c2fb-4647-9448-feec032d8ce0" x="149" y="49" width="158" height="20" forecolor="#330099"/>
+				<textElement>
+					<font fontName="Constantia" size="13" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[All warranties shall be]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="13598c59-c2fb-4647-9448-feec032d8ce0" x="-2" y="64" width="275" height="20" forecolor="#330099"/>
+				<textElement>
+					<font fontName="Constantia" size="13" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[handled by the company or their manufacturers]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="13598c59-c2fb-4647-9448-feec032d8ce0" x="-2" y="79" width="310" height="20" forecolor="#330099"/>
+				<textElement>
+					<font fontName="Constantia" size="13" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[MITTAL'S REPARING STATION can not be held ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="13598c59-c2fb-4647-9448-feec032d8ce0" x="-2" y="94" width="310" height="20" forecolor="#330099"/>
+				<textElement>
+					<font fontName="Constantia" size="13" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[responsible forany kind of omissions or errors on]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="f6371808-cb78-439b-8e33-bdd2a17b31eb" x="317" y="27" width="1" height="23" forecolor="#330099"/>
+			</line>
+			<line>
+				<reportElement uuid="f6371808-cb78-439b-8e33-bdd2a17b31eb" x="317" y="50" width="264" height="1" forecolor="#330099"/>
+			</line>
+			<line>
+				<reportElement uuid="f6371808-cb78-439b-8e33-bdd2a17b31eb" x="493" y="27" width="1" height="23" forecolor="#330099"/>
+			</line>
+			<line>
+				<reportElement uuid="f6371808-cb78-439b-8e33-bdd2a17b31eb" x="493" y="51" width="1" height="23" forecolor="#330099"/>
+			</line>
+			<line>
+				<reportElement uuid="f6371808-cb78-439b-8e33-bdd2a17b31eb" x="317" y="51" width="1" height="23" forecolor="#330099"/>
+			</line>
+			<line>
+				<reportElement uuid="f6371808-cb78-439b-8e33-bdd2a17b31eb" x="317" y="74" width="264" height="1" forecolor="#330099"/>
+			</line>
+			<line>
+				<reportElement uuid="f6371808-cb78-439b-8e33-bdd2a17b31eb" x="317" y="75" width="1" height="23" forecolor="#330099"/>
+			</line>
+			<line>
+				<reportElement uuid="f6371808-cb78-439b-8e33-bdd2a17b31eb" x="493" y="75" width="1" height="23" forecolor="#330099"/>
+			</line>
+			<line>
+				<reportElement uuid="f6371808-cb78-439b-8e33-bdd2a17b31eb" x="317" y="98" width="264" height="1" forecolor="#330099"/>
+			</line>
+			<line>
+				<reportElement uuid="f6371808-cb78-439b-8e33-bdd2a17b31eb" x="317" y="99" width="1" height="23" forecolor="#330099"/>
+			</line>
+			<line>
+				<reportElement uuid="f6371808-cb78-439b-8e33-bdd2a17b31eb" x="493" y="99" width="1" height="23" forecolor="#330099"/>
+			</line>
+			<staticText>
+				<reportElement uuid="13598c59-c2fb-4647-9448-feec032d8ce0" x="336" y="28" width="106" height="20" forecolor="#330099"/>
+				<textElement>
+					<font fontName="Tahoma" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Output Vat @]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="6fff597e-2e7f-4e54-b5bd-dd9793ed0e14" x="445" y="28" width="41" height="20" forecolor="#330099"/>
+				<textElement>
+					<font fontName="Tahoma" size="15" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{salevoucher_vatp}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="13598c59-c2fb-4647-9448-feec032d8ce0" x="319" y="52" width="135" height="20" forecolor="#330099"/>
+				<textElement>
+					<font fontName="Tahoma" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Output Additional]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="178dcace-0eb6-410e-8dcc-0549dbb9eef1" x="455" y="52" width="32" height="20" forecolor="#330099"/>
+				<textElement>
+					<font fontName="Tahoma" size="15" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{salevoucher_addp}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="13598c59-c2fb-4647-9448-feec032d8ce0" x="361" y="76" width="89" height="20" forecolor="#330099"/>
+				<textElement>
+					<font fontName="Tahoma" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Round Off]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="13598c59-c2fb-4647-9448-feec032d8ce0" x="356" y="124" width="89" height="20" forecolor="#330099"/>
+				<textElement>
+					<font fontName="Tahoma" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Grand Total]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="943be274-a22c-43b2-8b65-316efd646286" x="499" y="4" width="86" height="20" forecolor="#330099"/>
+				<textElement>
+					<font fontName="Tahoma" size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{salevoucher_amount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="7ac1e129-3f82-4c64-bb54-29b6ec5e0a11" x="499" y="29" width="86" height="20" forecolor="#330099"/>
+				<textElement>
+					<font fontName="Tahoma" size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{salevoucher_Vat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="5b45eb5d-4842-4377-bcec-97174338b3b9" x="500" y="53" width="85" height="20" forecolor="#330099"/>
+				<textElement>
+					<font fontName="Tahoma" size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{salevoucher_additional}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="b9db4028-e51b-4c65-96f9-65cf57691847" x="500" y="77" width="85" height="20" forecolor="#330099"/>
+				<textElement>
+					<font fontName="Tahoma" size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{salevoucher_roff}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement uuid="f6371808-cb78-439b-8e33-bdd2a17b31eb" x="317" y="122" width="264" height="1" forecolor="#330099"/>
+			</line>
+			<line>
+				<reportElement uuid="f6371808-cb78-439b-8e33-bdd2a17b31eb" x="317" y="123" width="1" height="23" forecolor="#330099"/>
+			</line>
+			<line>
+				<reportElement uuid="f6371808-cb78-439b-8e33-bdd2a17b31eb" x="493" y="123" width="1" height="23" forecolor="#330099"/>
+			</line>
+			<staticText>
+				<reportElement uuid="13598c59-c2fb-4647-9448-feec032d8ce0" x="318" y="101" width="177" height="20" forecolor="#330099"/>
+				<textElement>
+					<font fontName="Tahoma" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Service/Labour Charge]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="ab3a421c-077f-4fd9-a81b-ad47a016eccf" x="501" y="100" width="84" height="20" forecolor="#330099"/>
+				<textElement>
+					<font fontName="Tahoma" size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{salevoucher_scharge}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="13598c59-c2fb-4647-9448-feec032d8ce0" x="-5" y="109" width="315" height="20" forecolor="#330099"/>
+				<textElement>
+					<font fontName="Constantia" size="13" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[ their parts kindly accept delivery only if you agree this ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="13598c59-c2fb-4647-9448-feec032d8ce0" x="-2" y="123" width="303" height="20" forecolor="#330099"/>
+				<textElement>
+					<font fontName="Constantia" size="13" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[warrenty policy E&OE.]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="92" splitType="Stretch">
+			<line>
+				<reportElement uuid="361ee863-7f0b-4e8b-974c-5efedfaab91b" x="-10" y="88" width="591" height="1" forecolor="#330099"/>
+			</line>
+			<staticText>
+				<reportElement uuid="eae1e18c-636b-4156-8d1b-d1b50c6ef1a5" x="5" y="5" width="107" height="20" forecolor="#330099"/>
+				<textElement>
+					<font fontName="Constantia" size="13" isBold="true" isItalic="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Pre-Authenticate]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="eae1e18c-636b-4156-8d1b-d1b50c6ef1a5" x="137" y="71" width="107" height="20" forecolor="#330099"/>
+				<textElement>
+					<font fontName="Arial" size="10" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Authorised Signatory]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="361ee863-7f0b-4e8b-974c-5efedfaab91b" x="260" y="0" width="1" height="88" forecolor="#330099"/>
+			</line>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
