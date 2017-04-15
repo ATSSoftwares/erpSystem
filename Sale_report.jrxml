@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Sale_report" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="02fd68af-2e56-4920-bc3f-b2a14b4e4322">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="21"/>
+	<property name="ireport.y" value="30"/>
 	<style name="table">
 		<box>
 			<pen lineWidth="1.0" lineColor="#000000"/>
@@ -87,18 +87,18 @@ FROM
 	<title>
 		<band height="231" splitType="Stretch">
 			<staticText>
-				<reportElement uuid="3303ed03-542c-46da-9801-dfcef8a6bb91" x="-9" y="-11" width="154" height="20" forecolor="#330099"/>
+				<reportElement uuid="3303ed03-542c-46da-9801-dfcef8a6bb91" x="-9" y="-11" width="200" height="20" forecolor="#330099"/>
 				<textElement>
 					<font fontName="Arial" size="14" isBold="true"/>
 				</textElement>
-				<text><![CDATA[VAT TIN : 0922111790]]></text>
+				<text><![CDATA[VAT TIN : .................................]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="d420312e-a8bf-4da3-8745-320a08c001c7" x="18" y="15" width="546" height="52" forecolor="#330099"/>
+				<reportElement uuid="d420312e-a8bf-4da3-8745-320a08c001c7" x="146" y="15" width="255" height="52" forecolor="#330099"/>
 				<textElement>
 					<font fontName="Algerian" size="36" isBold="true" isStrikeThrough="false"/>
 				</textElement>
-				<text><![CDATA[Mittal's reparing station]]></text>
+				<text><![CDATA[V.K. TELECOM]]></text>
 			</staticText>
 			<staticText>
 				<reportElement uuid="6a0037c1-53b3-478e-96d5-c724887cfe69" x="231" y="-15" width="100" height="20" forecolor="#330099"/>
@@ -114,11 +114,11 @@ FROM
 				<reportElement uuid="361ee863-7f0b-4e8b-974c-5efedfaab91b" x="-12" y="109" width="591" height="1" forecolor="#330099"/>
 			</line>
 			<staticText>
-				<reportElement uuid="3303ed03-542c-46da-9801-dfcef8a6bb91" x="114" y="86" width="310" height="32" forecolor="#330099"/>
+				<reportElement uuid="3303ed03-542c-46da-9801-dfcef8a6bb91" x="-7" y="86" width="587" height="32" forecolor="#330099"/>
 				<textElement>
 					<font fontName="MoolBoran" size="20" isBold="true"/>
 				</textElement>
-				<text><![CDATA[15-DD Plaza Mathura.     Mobile-9897098308]]></text>
+				<text><![CDATA[Shop No. 6, Ganjwala Plaza, Bharatpur Gate, Mathura - 281001     Mob. 09758674206.]]></text>
 			</staticText>
 			<line>
 				<reportElement uuid="361ee863-7f0b-4e8b-974c-5efedfaab91b" x="396" y="109" width="1" height="119" forecolor="#330099"/>
@@ -246,13 +246,13 @@ FROM
 				<reportElement uuid="aeef5d24-84c3-4729-9330-8481f344fbd1" x="-13" y="2" width="594" height="27" forecolor="#330099"/>
 			</rectangle>
 			<line>
-				<reportElement uuid="396ed934-3d31-416d-a31b-b0cce25b9c89" x="489" y="2" width="1" height="27" forecolor="#330099"/>
+				<reportElement uuid="396ed934-3d31-416d-a31b-b0cce25b9c89" x="503" y="2" width="1" height="27" forecolor="#330099"/>
 			</line>
 			<line>
-				<reportElement uuid="da05c52b-44b7-4d35-8c09-04cc53d68c9f" x="403" y="2" width="1" height="27" forecolor="#330099"/>
+				<reportElement uuid="da05c52b-44b7-4d35-8c09-04cc53d68c9f" x="419" y="2" width="1" height="27" forecolor="#330099"/>
 			</line>
 			<line>
-				<reportElement uuid="089f4ed1-df8a-4da1-8cc3-e716ac27dcfd" x="313" y="2" width="1" height="27" forecolor="#330099"/>
+				<reportElement uuid="089f4ed1-df8a-4da1-8cc3-e716ac27dcfd" x="338" y="2" width="1" height="27" forecolor="#330099"/>
 			</line>
 			<staticText>
 				<reportElement uuid="e0ee3c23-61dc-4ede-a436-10cdb1e8ee98" x="50" y="6" width="113" height="20" forecolor="#330099"/>
@@ -262,109 +262,110 @@ FROM
 				<text><![CDATA[PARTICULARS]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="e0ee3c23-61dc-4ede-a436-10cdb1e8ee98" x="246" y="6" width="52" height="20" forecolor="#330099"/>
+				<reportElement uuid="e0ee3c23-61dc-4ede-a436-10cdb1e8ee98" x="355" y="6" width="52" height="20" forecolor="#330099"/>
 				<textElement>
 					<font fontName="Tahoma" size="15" isBold="true"/>
 				</textElement>
 				<text><![CDATA[QNTY.]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="e0ee3c23-61dc-4ede-a436-10cdb1e8ee98" x="338" y="6" width="41" height="20" forecolor="#330099"/>
+				<reportElement uuid="e0ee3c23-61dc-4ede-a436-10cdb1e8ee98" x="444" y="6" width="41" height="20" forecolor="#330099"/>
 				<textElement>
 					<font fontName="Tahoma" size="15" isBold="true"/>
 				</textElement>
 				<text><![CDATA[RATE]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="e0ee3c23-61dc-4ede-a436-10cdb1e8ee98" x="502" y="6" width="68" height="20" forecolor="#330099"/>
+				<reportElement uuid="e0ee3c23-61dc-4ede-a436-10cdb1e8ee98" x="509" y="6" width="68" height="20" forecolor="#330099"/>
 				<textElement>
 					<font fontName="Tahoma" size="15" isBold="true"/>
 				</textElement>
 				<text><![CDATA[AMOUNT]]></text>
 			</staticText>
 			<line>
-				<reportElement uuid="089f4ed1-df8a-4da1-8cc3-e716ac27dcfd" x="226" y="2" width="1" height="27" forecolor="#330099"/>
+				<reportElement uuid="089f4ed1-df8a-4da1-8cc3-e716ac27dcfd" x="209" y="2" width="1" height="27" forecolor="#330099"/>
 			</line>
 			<staticText>
-				<reportElement uuid="e0ee3c23-61dc-4ede-a436-10cdb1e8ee98" x="413" y="6" width="68" height="20" forecolor="#330099"/>
+				<reportElement uuid="e0ee3c23-61dc-4ede-a436-10cdb1e8ee98" x="248" y="6" width="42" height="20" forecolor="#330099"/>
 				<textElement>
 					<font fontName="Tahoma" size="15" isBold="true"/>
 				</textElement>
-				<text><![CDATA[DISC. %]]></text>
+				<text><![CDATA[IMEI]]></text>
 			</staticText>
 		</band>
 	</columnHeader>
 	<detail>
 		<band height="23" splitType="Stretch">
 			<textField isStretchWithOverflow="true">
-				<reportElement uuid="5dc05a98-56c6-49c1-9c5c-15e8407dece9" mode="Transparent" x="-11" y="1" width="81" height="20" forecolor="#330099"/>
+				<reportElement uuid="5dc05a98-56c6-49c1-9c5c-15e8407dece9" mode="Transparent" x="-16" y="1" width="72" height="20" forecolor="#330099"/>
 				<textElement>
 					<font fontName="Tahoma"/>
 				</textElement>
 				<textFieldExpression><![CDATA[""+$F{saleitems_Item}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true">
-				<reportElement uuid="e68f4391-bc87-42d6-a190-4c384745cd27" x="71" y="1" width="72" height="20" forecolor="#330099"/>
+				<reportElement uuid="e68f4391-bc87-42d6-a190-4c384745cd27" x="56" y="1" width="72" height="20" forecolor="#330099"/>
 				<textElement>
 					<font fontName="Tahoma"/>
 				</textElement>
 				<textFieldExpression><![CDATA[""+$F{saleitems_Company}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true">
-				<reportElement uuid="3fb1a06a-ad6e-4f44-8d9a-020a0e30d6af" x="143" y="1" width="82" height="20" forecolor="#330099"/>
+				<reportElement uuid="3fb1a06a-ad6e-4f44-8d9a-020a0e30d6af" x="128" y="1" width="73" height="20" forecolor="#330099"/>
 				<textElement>
-					<font fontName="Tahoma"/>
+					<font fontName="Tahoma" size="10"/>
 				</textElement>
 				<textFieldExpression><![CDATA[""+$F{saleitems_Modelno}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true">
-				<reportElement uuid="4b8f2c39-7951-434d-8a78-8e204adaa22a" x="320" y="2" width="79" height="20" forecolor="#330099"/>
-				<textElement/>
+				<reportElement uuid="4b8f2c39-7951-434d-8a78-8e204adaa22a" x="422" y="2" width="79" height="20" forecolor="#330099"/>
+				<textElement>
+					<font fontName="Tahoma"/>
+				</textElement>
 				<textFieldExpression><![CDATA[""+$F{saleitems_Salerate}]]></textFieldExpression>
 			</textField>
 			<line>
-				<reportElement uuid="c7dc595b-34e7-488d-8ba1-b83024ec2ff2" x="313" y="-1" width="1" height="22" forecolor="#330099"/>
+				<reportElement uuid="c7dc595b-34e7-488d-8ba1-b83024ec2ff2" x="338" y="-1" width="1" height="22" forecolor="#330099"/>
 			</line>
 			<textField isStretchWithOverflow="true">
-				<reportElement uuid="d8348559-eccf-4a30-8ced-006b24aa7a0b" x="232" y="1" width="77" height="20" forecolor="#330099"/>
+				<reportElement uuid="d8348559-eccf-4a30-8ced-006b24aa7a0b" x="340" y="1" width="77" height="20" forecolor="#330099"/>
 				<textElement>
 					<font fontName="Tahoma"/>
 				</textElement>
 				<textFieldExpression><![CDATA[""+$F{saleitems_Quantity}]]></textFieldExpression>
 			</textField>
 			<line>
-				<reportElement uuid="c7dc595b-34e7-488d-8ba1-b83024ec2ff2" x="403" y="-1" width="1" height="22" forecolor="#330099"/>
+				<reportElement uuid="c7dc595b-34e7-488d-8ba1-b83024ec2ff2" x="419" y="-1" width="1" height="22" forecolor="#330099"/>
 			</line>
 			<line>
-				<reportElement uuid="c7dc595b-34e7-488d-8ba1-b83024ec2ff2" x="489" y="-1" width="1" height="22" forecolor="#330099"/>
+				<reportElement uuid="c7dc595b-34e7-488d-8ba1-b83024ec2ff2" x="503" y="-1" width="1" height="22" forecolor="#330099"/>
 			</line>
 			<line>
 				<reportElement uuid="28f0d8c8-6409-4923-8297-5c3bd621adb7" x="-7" y="22" width="592" height="1" forecolor="#330099"/>
 			</line>
 			<line>
-				<reportElement uuid="c7dc595b-34e7-488d-8ba1-b83024ec2ff2" x="226" y="-1" width="1" height="22" forecolor="#330099"/>
+				<reportElement uuid="c7dc595b-34e7-488d-8ba1-b83024ec2ff2" x="209" y="-1" width="1" height="22" forecolor="#330099"/>
 			</line>
 			<textField>
-				<reportElement uuid="b2e659f5-eb8d-4374-b23a-87c03abbb0e7" x="411" y="2" width="54" height="18" forecolor="#330099"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{saleitems_disc}]]></textFieldExpression>
+				<reportElement uuid="3524ab99-774a-4069-8542-d17dfedb26d6" x="506" y="2" width="79" height="20" forecolor="#330099"/>
+				<textElement>
+					<font fontName="Tahoma"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{saleitems_Total}]]></textFieldExpression>
 			</textField>
-			<staticText>
-				<reportElement uuid="7d3e6493-27a7-4834-88a7-ff54c28daa6d" x="471" y="3" width="14" height="20" forecolor="#330099"/>
-				<textElement/>
-				<text><![CDATA[%]]></text>
-			</staticText>
 			<textField>
-				<reportElement uuid="21b1c75e-ca21-47b3-8b42-ff8949defe72" x="496" y="1" width="81" height="20" forecolor="#330099"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{saleitems_discamount}]]></textFieldExpression>
+				<reportElement uuid="04297fd2-119d-48cf-a427-d1d7016a09d9" x="215" y="1" width="118" height="20" forecolor="#330099"/>
+				<textElement>
+					<font fontName="Tahoma"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{saleitems_imei}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>
 	<columnFooter>
 		<band height="148" splitType="Stretch">
 			<textField>
-				<reportElement uuid="d67dc80e-34a8-4d90-93fa-7d3a4040d275" x="496" y="124" width="85" height="20" forecolor="#330099"/>
+				<reportElement uuid="d67dc80e-34a8-4d90-93fa-7d3a4040d275" x="496" y="26" width="85" height="20" forecolor="#330099"/>
 				<textElement>
 					<font fontName="Tahoma" size="15"/>
 				</textElement>
@@ -377,68 +378,48 @@ FROM
 				<reportElement uuid="f6371808-cb78-439b-8e33-bdd2a17b31eb" x="-7" y="146" width="592" height="1" forecolor="#330099"/>
 			</line>
 			<line>
-				<reportElement uuid="f6371808-cb78-439b-8e33-bdd2a17b31eb" x="317" y="26" width="264" height="1" forecolor="#330099"/>
-			</line>
-			<line>
 				<reportElement uuid="f6371808-cb78-439b-8e33-bdd2a17b31eb" x="317" y="3" width="1" height="23" forecolor="#330099"/>
 			</line>
 			<line>
 				<reportElement uuid="f6371808-cb78-439b-8e33-bdd2a17b31eb" x="493" y="3" width="1" height="23" forecolor="#330099"/>
 			</line>
 			<staticText>
-				<reportElement uuid="13598c59-c2fb-4647-9448-feec032d8ce0" x="347" y="4" width="125" height="20" forecolor="#330099"/>
-				<textElement>
-					<font fontName="Tahoma" size="15" isBold="true"/>
-				</textElement>
-				<text><![CDATA[TOTAL AMOUNT]]></text>
-			</staticText>
-			<staticText>
 				<reportElement uuid="13598c59-c2fb-4647-9448-feec032d8ce0" x="-1" y="27" width="90" height="20" forecolor="#330099"/>
 				<textElement>
 					<font fontName="Constantia" size="13" isBold="true" isItalic="true" isUnderline="true"/>
 				</textElement>
-				<text><![CDATA[Declaration-]]></text>
+				<text><![CDATA[Note:-]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="13598c59-c2fb-4647-9448-feec032d8ce0" x="-3" y="49" width="149" height="20" forecolor="#330099"/>
-				<textElement>
-					<font fontName="Constantia" size="13" isBold="true" isUnderline="false"/>
-				</textElement>
-				<text><![CDATA[TERMS & CONDITIONS:]]></text>
-			</staticText>
-			<staticText>
-				<reportElement uuid="13598c59-c2fb-4647-9448-feec032d8ce0" x="149" y="49" width="158" height="20" forecolor="#330099"/>
+				<reportElement uuid="13598c59-c2fb-4647-9448-feec032d8ce0" x="0" y="49" width="307" height="20" forecolor="#330099"/>
 				<textElement>
 					<font fontName="Constantia" size="13" isBold="false" isUnderline="false"/>
 				</textElement>
-				<text><![CDATA[All warranties shall be]]></text>
+				<text><![CDATA[> All Subject to Mathura Jurisdiction.   > E. & O.E.]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="13598c59-c2fb-4647-9448-feec032d8ce0" x="-2" y="64" width="275" height="20" forecolor="#330099"/>
+				<reportElement uuid="13598c59-c2fb-4647-9448-feec032d8ce0" x="-1" y="68" width="275" height="20" forecolor="#330099"/>
 				<textElement>
 					<font fontName="Constantia" size="13" isBold="false" isUnderline="false"/>
 				</textElement>
-				<text><![CDATA[handled by the company or their manufacturers]]></text>
+				<text><![CDATA[> Goods once sold will not be taken back.]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="13598c59-c2fb-4647-9448-feec032d8ce0" x="-2" y="79" width="310" height="20" forecolor="#330099"/>
+				<reportElement uuid="13598c59-c2fb-4647-9448-feec032d8ce0" x="-1" y="87" width="310" height="20" forecolor="#330099"/>
 				<textElement>
 					<font fontName="Constantia" size="13" isBold="false" isUnderline="false"/>
 				</textElement>
-				<text><![CDATA[MITTAL'S REPARING STATION can not be held ]]></text>
+				<text><![CDATA[> After dispatch we are not responsible for the Goods.]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="13598c59-c2fb-4647-9448-feec032d8ce0" x="-2" y="94" width="310" height="20" forecolor="#330099"/>
+				<reportElement uuid="13598c59-c2fb-4647-9448-feec032d8ce0" x="-1" y="106" width="310" height="20" forecolor="#330099"/>
 				<textElement>
 					<font fontName="Constantia" size="13" isBold="false" isUnderline="false"/>
 				</textElement>
-				<text><![CDATA[responsible forany kind of omissions or errors on]]></text>
+				<text><![CDATA[> Interest will be charged @ 24% from the date of bill.]]></text>
 			</staticText>
 			<line>
 				<reportElement uuid="f6371808-cb78-439b-8e33-bdd2a17b31eb" x="317" y="27" width="1" height="23" forecolor="#330099"/>
-			</line>
-			<line>
-				<reportElement uuid="f6371808-cb78-439b-8e33-bdd2a17b31eb" x="317" y="50" width="264" height="1" forecolor="#330099"/>
 			</line>
 			<line>
 				<reportElement uuid="f6371808-cb78-439b-8e33-bdd2a17b31eb" x="493" y="27" width="1" height="23" forecolor="#330099"/>
@@ -459,121 +440,24 @@ FROM
 				<reportElement uuid="f6371808-cb78-439b-8e33-bdd2a17b31eb" x="493" y="75" width="1" height="23" forecolor="#330099"/>
 			</line>
 			<line>
-				<reportElement uuid="f6371808-cb78-439b-8e33-bdd2a17b31eb" x="317" y="98" width="264" height="1" forecolor="#330099"/>
-			</line>
-			<line>
 				<reportElement uuid="f6371808-cb78-439b-8e33-bdd2a17b31eb" x="317" y="99" width="1" height="23" forecolor="#330099"/>
 			</line>
 			<line>
 				<reportElement uuid="f6371808-cb78-439b-8e33-bdd2a17b31eb" x="493" y="99" width="1" height="23" forecolor="#330099"/>
 			</line>
 			<staticText>
-				<reportElement uuid="13598c59-c2fb-4647-9448-feec032d8ce0" x="336" y="28" width="106" height="20" forecolor="#330099"/>
-				<textElement>
-					<font fontName="Tahoma" size="15" isBold="true"/>
-				</textElement>
-				<text><![CDATA[Output Vat @]]></text>
-			</staticText>
-			<textField>
-				<reportElement uuid="6fff597e-2e7f-4e54-b5bd-dd9793ed0e14" x="445" y="28" width="41" height="20" forecolor="#330099"/>
-				<textElement>
-					<font fontName="Tahoma" size="15" isBold="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{salevoucher_vatp}]]></textFieldExpression>
-			</textField>
-			<staticText>
-				<reportElement uuid="13598c59-c2fb-4647-9448-feec032d8ce0" x="319" y="52" width="135" height="20" forecolor="#330099"/>
-				<textElement>
-					<font fontName="Tahoma" size="15" isBold="true"/>
-				</textElement>
-				<text><![CDATA[Output Additional]]></text>
-			</staticText>
-			<textField>
-				<reportElement uuid="178dcace-0eb6-410e-8dcc-0549dbb9eef1" x="455" y="52" width="32" height="20" forecolor="#330099"/>
-				<textElement>
-					<font fontName="Tahoma" size="15" isBold="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{salevoucher_addp}]]></textFieldExpression>
-			</textField>
-			<staticText>
-				<reportElement uuid="13598c59-c2fb-4647-9448-feec032d8ce0" x="361" y="76" width="89" height="20" forecolor="#330099"/>
-				<textElement>
-					<font fontName="Tahoma" size="15" isBold="true"/>
-				</textElement>
-				<text><![CDATA[Round Off]]></text>
-			</staticText>
-			<staticText>
-				<reportElement uuid="13598c59-c2fb-4647-9448-feec032d8ce0" x="356" y="124" width="89" height="20" forecolor="#330099"/>
+				<reportElement uuid="13598c59-c2fb-4647-9448-feec032d8ce0" x="354" y="26" width="89" height="20" forecolor="#330099"/>
 				<textElement>
 					<font fontName="Tahoma" size="15" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Grand Total]]></text>
 			</staticText>
-			<textField>
-				<reportElement uuid="943be274-a22c-43b2-8b65-316efd646286" x="499" y="4" width="86" height="20" forecolor="#330099"/>
-				<textElement>
-					<font fontName="Tahoma" size="15"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{salevoucher_amount}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement uuid="7ac1e129-3f82-4c64-bb54-29b6ec5e0a11" x="499" y="29" width="86" height="20" forecolor="#330099"/>
-				<textElement>
-					<font fontName="Tahoma" size="15"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{salevoucher_Vat}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement uuid="5b45eb5d-4842-4377-bcec-97174338b3b9" x="500" y="53" width="85" height="20" forecolor="#330099"/>
-				<textElement>
-					<font fontName="Tahoma" size="15"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{salevoucher_additional}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement uuid="b9db4028-e51b-4c65-96f9-65cf57691847" x="500" y="77" width="85" height="20" forecolor="#330099"/>
-				<textElement>
-					<font fontName="Tahoma" size="15"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{salevoucher_roff}]]></textFieldExpression>
-			</textField>
-			<line>
-				<reportElement uuid="f6371808-cb78-439b-8e33-bdd2a17b31eb" x="317" y="122" width="264" height="1" forecolor="#330099"/>
-			</line>
 			<line>
 				<reportElement uuid="f6371808-cb78-439b-8e33-bdd2a17b31eb" x="317" y="123" width="1" height="23" forecolor="#330099"/>
 			</line>
 			<line>
 				<reportElement uuid="f6371808-cb78-439b-8e33-bdd2a17b31eb" x="493" y="123" width="1" height="23" forecolor="#330099"/>
 			</line>
-			<staticText>
-				<reportElement uuid="13598c59-c2fb-4647-9448-feec032d8ce0" x="318" y="101" width="177" height="20" forecolor="#330099"/>
-				<textElement>
-					<font fontName="Tahoma" size="15" isBold="true"/>
-				</textElement>
-				<text><![CDATA[Service/Labour Charge]]></text>
-			</staticText>
-			<textField>
-				<reportElement uuid="ab3a421c-077f-4fd9-a81b-ad47a016eccf" x="501" y="100" width="84" height="20" forecolor="#330099"/>
-				<textElement>
-					<font fontName="Tahoma" size="15"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{salevoucher_scharge}]]></textFieldExpression>
-			</textField>
-			<staticText>
-				<reportElement uuid="13598c59-c2fb-4647-9448-feec032d8ce0" x="-5" y="109" width="315" height="20" forecolor="#330099"/>
-				<textElement>
-					<font fontName="Constantia" size="13" isBold="false" isUnderline="false"/>
-				</textElement>
-				<text><![CDATA[ their parts kindly accept delivery only if you agree this ]]></text>
-			</staticText>
-			<staticText>
-				<reportElement uuid="13598c59-c2fb-4647-9448-feec032d8ce0" x="-2" y="123" width="303" height="20" forecolor="#330099"/>
-				<textElement>
-					<font fontName="Constantia" size="13" isBold="false" isUnderline="false"/>
-				</textElement>
-				<text><![CDATA[warrenty policy E&OE.]]></text>
-			</staticText>
 		</band>
 	</columnFooter>
 	<pageFooter>
@@ -589,7 +473,7 @@ FROM
 				<text><![CDATA[Pre-Authenticate]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="eae1e18c-636b-4156-8d1b-d1b50c6ef1a5" x="137" y="71" width="107" height="20" forecolor="#330099"/>
+				<reportElement uuid="eae1e18c-636b-4156-8d1b-d1b50c6ef1a5" x="127" y="71" width="107" height="20" forecolor="#330099"/>
 				<textElement>
 					<font fontName="Arial" size="10" isBold="false" isItalic="false" isUnderline="false"/>
 				</textElement>
@@ -598,6 +482,13 @@ FROM
 			<line>
 				<reportElement uuid="361ee863-7f0b-4e8b-974c-5efedfaab91b" x="260" y="0" width="1" height="88" forecolor="#330099"/>
 			</line>
+			<staticText>
+				<reportElement uuid="eae1e18c-636b-4156-8d1b-d1b50c6ef1a5" x="119" y="21" width="139" height="20" forecolor="#330099"/>
+				<textElement>
+					<font fontName="Arial Rounded MT Bold" size="12" isBold="true" isItalic="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[For : V. K. Telecom]]></text>
+			</staticText>
 		</band>
 	</pageFooter>
 	<summary>

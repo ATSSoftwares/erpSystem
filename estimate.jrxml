@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="estimate" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6c3ae79d-fc8b-4080-b7b4-55b843d40d22">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     salevoucher.`Invoiceno` AS salevoucher_Invoiceno,
+     salevoucher.`Date` AS salevoucher_Date,
+     salevoucher.`Customer` AS salevoucher_Customer,
+     salevoucher.`Contact` AS salevoucher_Contact,
+     salevoucher.`Contact2` AS salevoucher_Contact2,
+     salevoucher.`Address` AS salevoucher_Address,
+     salevoucher.`City` AS salevoucher_City,
+     salevoucher.`Pincode` AS salevoucher_Pincode,
+     salevoucher.`GrandTotal` AS salevoucher_GrandTotal,
+     saleitems.`Item` AS saleitems_Item,
+     saleitems.`Company` AS saleitems_Company,
+     saleitems.`Modelno` AS saleitems_Modelno,
+     saleitems.`imei` AS saleitems_imei,
+     saleitems.`Salerate` AS saleitems_Salerate,
+     saleitems.`Quantity` AS saleitems_Quantity,
+     saleitems.`Total` AS saleitems_Total
+FROM
+     `salevoucher` salevoucher,
+     `saleitems` saleitems]]>
+	</queryString>
+	<field name="salevoucher_Invoiceno" class="java.lang.Integer"/>
+	<field name="salevoucher_Date" class="java.lang.String"/>
+	<field name="salevoucher_Customer" class="java.lang.String"/>
+	<field name="salevoucher_Contact" class="java.lang.String"/>
+	<field name="salevoucher_Contact2" class="java.lang.String"/>
+	<field name="salevoucher_Address" class="java.lang.String"/>
+	<field name="salevoucher_City" class="java.lang.String"/>
+	<field name="salevoucher_Pincode" class="java.lang.String"/>
+	<field name="salevoucher_GrandTotal" class="java.lang.String"/>
+	<field name="saleitems_Item" class="java.lang.String"/>
+	<field name="saleitems_Company" class="java.lang.String"/>
+	<field name="saleitems_Modelno" class="java.lang.String"/>
+	<field name="saleitems_imei" class="java.lang.String"/>
+	<field name="saleitems_Salerate" class="java.lang.String"/>
+	<field name="saleitems_Quantity" class="java.lang.String"/>
+	<field name="saleitems_Total" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="124" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="6a0037c1-53b3-478e-96d5-c724887cfe69" x="242" y="-5" width="79" height="20" forecolor="#330099"/>
+				<textElement>
+					<font fontName="Tahoma" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ESTIMATE]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="361ee863-7f0b-4e8b-974c-5efedfaab91b" x="-18" y="32" width="591" height="1" forecolor="#330099"/>
+				<graphicElement>
+					<pen lineWidth="1.0"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement uuid="6a0037c1-53b3-478e-96d5-c724887cfe69" x="3" y="42" width="53" height="20" forecolor="#330099"/>
+				<textElement>
+					<font fontName="Tahoma" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date :]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="a1e80e9d-f8b5-4ba8-9d86-76d2fde9a994" x="63" y="42" width="100" height="20" forecolor="#330099"/>
+				<textElement>
+					<font fontName="Tahoma" size="15" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{salevoucher_Date}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="6a0037c1-53b3-478e-96d5-c724887cfe69" x="3" y="72" width="53" height="20" forecolor="#330099"/>
+				<textElement>
+					<font fontName="Tahoma" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Party :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="6a0037c1-53b3-478e-96d5-c724887cfe69" x="65" y="72" width="53" height="20" forecolor="#330099"/>
+				<textElement>
+					<font fontName="Tahoma" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[.cash]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch">
+			<textField>
+				<reportElement uuid="afd97e93-d920-4759-8392-889c62ca1099" x="4" y="-23" width="100" height="20" forecolor="#330099"/>
+				<textElement>
+					<font fontName="Tahoma" size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{salevoucher_Customer}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="40" splitType="Stretch">
+			<rectangle>
+				<reportElement uuid="aeef5d24-84c3-4729-9330-8481f344fbd1" x="-10" y="6" width="574" height="27" forecolor="#330099"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="e0ee3c23-61dc-4ede-a436-10cdb1e8ee98" x="485" y="9" width="68" height="20" forecolor="#330099"/>
+				<textElement>
+					<font fontName="Tahoma" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e0ee3c23-61dc-4ede-a436-10cdb1e8ee98" x="394" y="9" width="68" height="20" forecolor="#330099"/>
+				<textElement>
+					<font fontName="Tahoma" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Price]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e0ee3c23-61dc-4ede-a436-10cdb1e8ee98" x="304" y="9" width="68" height="20" forecolor="#330099"/>
+				<textElement>
+					<font fontName="Tahoma" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Qty.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e0ee3c23-61dc-4ede-a436-10cdb1e8ee98" x="21" y="9" width="68" height="20" forecolor="#330099"/>
+				<textElement>
+					<font fontName="Tahoma" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Item]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="29" splitType="Stretch">
+			<textField>
+				<reportElement uuid="0b77aab5-7bae-4c79-ad3d-320d3770b432" x="6" y="4" width="100" height="20" forecolor="#330099"/>
+				<textElement>
+					<font fontName="Tahoma" size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{saleitems_Company}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="5f71963d-e4f3-4915-99d2-3e8d493d3827" x="109" y="4" width="100" height="20" forecolor="#330099"/>
+				<textElement>
+					<font fontName="Tahoma" size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{saleitems_Modelno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="63f6cf7a-7206-46bb-9f14-bd5354894fd9" x="305" y="4" width="67" height="20" forecolor="#330099"/>
+				<textElement>
+					<font fontName="Tahoma" size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{saleitems_Quantity}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="26ec0506-9cc6-444e-b976-81345c43f73d" x="390" y="4" width="83" height="20" forecolor="#330099"/>
+				<textElement>
+					<font fontName="Tahoma" size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{saleitems_Salerate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="64b106a8-468b-41a6-b561-802827aed16d" x="479" y="4" width="91" height="20" forecolor="#330099"/>
+				<textElement>
+					<font fontName="Tahoma" size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{saleitems_Total}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement uuid="f6371808-cb78-439b-8e33-bdd2a17b31eb" x="-19" y="4" width="592" height="1" forecolor="#330099"/>
+			</line>
+			<line>
+				<reportElement uuid="f6371808-cb78-439b-8e33-bdd2a17b31eb" x="-19" y="42" width="592" height="1" forecolor="#330099"/>
+			</line>
+			<textField>
+				<reportElement uuid="01a2bc87-a141-460e-801a-dbdc6bd79e88" x="479" y="13" width="90" height="20" forecolor="#330099"/>
+				<textElement>
+					<font fontName="Tahoma" size="15" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{salevoucher_GrandTotal}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="53" splitType="Stretch">
+			<textField>
+				<reportElement uuid="eda6240a-85c6-4a84-9790-8d8034128735" x="479" y="14" width="90" height="20" forecolor="#330099"/>
+				<textElement>
+					<font fontName="Tahoma" size="15" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{salevoucher_GrandTotal}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="a909906e-9cca-4ebd-a3f8-34b2ff49c659" x="365" y="14" width="100" height="20" forecolor="#330099"/>
+				<textElement>
+					<font fontName="Tahoma" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Grand Total :]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
